@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * main - function to run the shell
+ * main - Entry point
  * @acrg: number of arguments
  * @avrg: pointer to arguments
  * @env: pointer to env variables

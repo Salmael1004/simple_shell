@@ -97,12 +97,12 @@ char **_getTRAIL(char **env)
 
 
 /**
- * error_msg - function to print message not found
+ * error_msg - prints message not found
  * @nm: name of shell
- * @cc: number of cicles
+ * @cc: number of circles
  * @cmd: pointer to token command
  *
- * Return: Nothing
+ * Return: No return
  */
 void error_msg(char *nm, int cc, char **cmd)
 {
@@ -114,5 +114,5 @@ void error_msg(char *nm, int cc, char **cmd)
 	write(STDOUT_FILENO, &c, 1);
 	write(STDOUT_FILENO, ": ", 2);
 	write(STDOUT_FILENO, cmd[0], _strlen(cmd[0]));
-	write(STDOUT_FILENO, ": not found\n", 12);
+	write(STDOUT_FILENO, ": not found\n", 15);
 }

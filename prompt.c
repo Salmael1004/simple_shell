@@ -8,7 +8,7 @@
 void prompt(void)
 {
 	if (isatty(STDIN_FILENO))
-		write(STDOUT_FILENO, "hsh>> ", 6);
+		write(STDOUT_FILENO, "$ ", 2);
 }
 
 
@@ -21,7 +21,7 @@ void prompt(void)
 void doornob(int signal_song)
 {
 	(void)signal_song;
-	write(STDOUT_FILENO, "\nhsh>> ", 7);
+	write(STDOUT_FILENO, "\n$ ", 3);
 }
 
 
@@ -54,7 +54,9 @@ void _EOF(char *buffer)
  */
 void shell_ex(char **cmd)
 {
-	int sta_tus = 0;
+	int sta_tus;
+
+	sta_tus = 0;
 
 	if (cmd[1] == NULL)
 	{

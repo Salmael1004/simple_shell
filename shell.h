@@ -37,6 +37,27 @@ void print_env(char **env);
 char **_getTRAIL(char **env);
 void error_msg(char *nm, int cc, char **cmd);
 
+/******** functions.c *********/
+
+int _strcmp(char *str1, char *str2);
+unsigned int _strlen(char *str);
+char *_strcpy(char *dest, char *str);
+
+
+/*******functions-etc.c *******/
+
+char *_strcat(char *dest, char *str);
+int _atoi(char *str);
+
+/*****memorycheck.c*********/
+
+void free_donut(char **cmd);
+void free_ex(char **cmd);
+
+
+/****** token.c **********/
+
+char **token(char *buffer, const char *tmi);
 
 
 
