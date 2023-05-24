@@ -114,5 +114,5 @@ void error_msg(char *nm, int cc, char **cmd)
 	write(STDOUT_FILENO, &c, 1);
 	write(STDOUT_FILENO, ": ", 2);
 	write(STDOUT_FILENO, cmd[0], _strlen(cmd[0]));
-	write(STDOUT_FILENO, ": not found\n", 15);
+	write(STDOUT_FILENO, ": not found\n", 12);
 }
