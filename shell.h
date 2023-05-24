@@ -11,11 +11,12 @@
 
 #define BUFFER 1024
 
-void print_string(char *string);
-char **token(char *stg);
-void prompt(int file, struct stat buffer);
-void _puts(char *string);
-void create_cld(char **cmd, char *nm, har **env, int cc);
-int change_direct(const char *dest);
+/******** cd.c ********/
+
+void create_door(char **cmd, char *nm, char **env, int cc);
+int change_direct(const char *trail);
+
+
+
 
 #endif

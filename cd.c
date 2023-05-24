@@ -1,15 +1,15 @@
 #include "shell.h"
 
 /**
- * create_cld - A function that creates a sub process.
- * @cmd: The pointer to token.
- * @nm: The pointer to the name
- * @env: The pointer to the enviromental variables.
- * @cc: Number of executed cicles.
+ * create_door - function to create a sub process
+ * @cmd: pointer to token command
+ * @nm: pointer to name of shell
+ * @env: pointer to the env variables
+ * @cc: number of executed cicles
  *
  * Return: Nothing.
  */
-void create_cld(char **cmd, char *nm, har **env, int cc)
+void create_door(char **cmd, char *nm, char **env, int cc)
 {
 	int pid = 0;
 	int status = 0;
@@ -19,41 +19,41 @@ void create_cld(char **cmd, char *nm, har **env, int cc)
 	if (pid < 0)
 	{
 		perror("Error: ");
-		free_exit(cmd);
+		free_ex(cmd);
 	}
 	else if (pid == 0)
 	{
 		execute(cmd, nm, env, cc);
-		free_dp(cmd);
+		free_donut(cmd);
 	}
 	else
 	{
 		wait_error = waitpid(pid, &status, 0);
 		if (wait_error < 0)
 		{
-			free_exit(cmd);
+			free_ex(cmd);
 		}
-		free_dp(cmd);
+		free_donut(cmd);
 	}
 }
 
+
 /**
- * change_direct - function that changes working directory.
- * @dest: new working current directory.
- *
- * Return: 0 on success, -1 on failure.
- */
-int change_direct(const char *dest)
+  * change_direct - function to change working directory
+  * @trail: current working directory
+  *
+  * Return: 0 on success, -1 on failure
+  */
+int change_direct(const char *trail)
 {
 	char *buffer = NULL;
 	size_t size = 1024;
 
-	if (dest == NULL)
-		dest = getcwd(buffer, size);
-
-	if (chdir(dest) == -1)
+	if (trail == NULL)
+		trail = getcwd(buffer, size);
+	if (chdir(trail) == -1)
 	{
-		perror(dest);
+		perror(trail);
 		return (98);
 	}
 	return (1);
