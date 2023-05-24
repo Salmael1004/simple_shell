@@ -30,6 +30,14 @@ void create_door(char **cmd, char *nm, char **env, int cc);
 int change_direct(const char *trail);
 
 
+/******** env-main.c ********/
+
+void execute(char **cmd, char *nm, char **env, int cc);
+void print_env(char **env);
+char **_getTRAIL(char **env);
+void error_msg(char *nm, int cc, char **cmd);
+
+
 
 
 #endif
