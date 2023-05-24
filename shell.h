@@ -11,6 +11,15 @@
 
 #define BUFFER 1024
 
+
+/******** prompt.c ********/
+
+void prompt(void);
+void doornob(int signal_song);
+void _EOF(char *buffer);
+void shell_ex(char **cmd);
+
+
 /******** cd.c ********/
 
 void create_door(char **cmd, char *nm, char **env, int cc);
