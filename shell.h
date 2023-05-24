@@ -12,6 +12,10 @@
 #define BUFFER 1024
 
 
+/******** shell.c ********/
+
+int main(int acrg, char **avrg, char **env);
+
 /******** prompt.c ********/
 
 void prompt(void);
